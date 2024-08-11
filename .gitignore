@@ -26,7 +26,7 @@ instance/
 Thumbs.db
 
 # Client folder (assuming it's in the root of your project)
-/client/*
+
 !/client/.gitignore
 
 # Logs
