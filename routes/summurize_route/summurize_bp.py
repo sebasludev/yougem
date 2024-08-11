@@ -17,12 +17,9 @@ model = genai.GenerativeModel(
   system_instruction="summurize model answer shortly each item in the JSON array and return in the following format: \n\n{\n   user_text : user text, \n   summury : model text\n   time : time \n}"
 )
 
-
-
-
 chat_summurize_bp = Blueprint('chat_summurize', __name__)
 
-@chat_summurize_bp.route('/api/chat-summurize', methods=['POST'])
+@chat_summurize_bp.route('/chat-summurize', methods=['POST'])
 def process_chat_summurize():
     chat_session = model.start_chat(history=history)
     try:

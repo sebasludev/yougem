@@ -21,7 +21,7 @@ youtube = build(YOUTUBE_API_SERVICE_NAME, YOUTUBE_API_VERSION, developerKey=YOUT
 
 def generate_chat(model_name, content,system_instruction):
     model = genai.GenerativeModel(
-      model_name=model_name,
+        model_name="gemini-1.5-flash",
       system_instruction=system_instruction
       )
     response = model.generate_content(content, stream=True)

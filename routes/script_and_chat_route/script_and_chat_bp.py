@@ -4,7 +4,7 @@ from config.config import generate_chat
 
 script_episodes_bp = Blueprint('scriptchat', __name__) 
 
-@script_episodes_bp.route('/api/scriptchat',methods=['POST'])
+@script_episodes_bp.route('/scriptchat',methods=['POST'])
 def set_chat():
     if request.method == "POST":
         try:

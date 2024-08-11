@@ -7,7 +7,6 @@ import { useVideoPlayer } from "../../context/VideoContext";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 
 const fetchData = async (data) => {
-  // Replace 'YOUR_API_ENDPOINT' with the actual endpoint
   const response = await fetch("http://localhost:5000/api/chat-summurize", {
     method: "POST",
     headers: {

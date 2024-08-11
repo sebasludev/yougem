@@ -4,7 +4,7 @@ from youtube_transcript_api import YouTubeTranscriptApi
 
 chat_bp = Blueprint('chat',__name__)
 
-@chat_bp.route('/api/chat',methods=['POST'])
+@chat_bp.route('/chat',methods=['POST'])
 def start_chat():
     if request.method == "POST":
         try:

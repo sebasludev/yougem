@@ -4,7 +4,7 @@ from .genai_model import generate_learning_path_model
 from .api.fetch_video import fetch_youtube_video
 
 learn_bp = Blueprint('learn',__name__)
-@learn_bp.route('/api/learn',methods=['GET'])
+@learn_bp.route('/',methods=['GET'])
 def learn():
     topic = request.args.get('topic')  
     if topic:

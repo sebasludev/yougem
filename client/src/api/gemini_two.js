@@ -1,5 +1,5 @@
 export async function* streamGeminiTwo({
-  model = "gemini-1.5-pro", // or gemini-1.5-pro
+  model = "gemini-1.5-flash", // or gemini-1.5-pro
   contents = [],
   system_instruction = "You are a helpful assistant.",
   video_id = "_fuimO6ErKI",

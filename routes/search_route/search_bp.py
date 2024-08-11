@@ -19,7 +19,7 @@ model = genai.GenerativeModel(
 
 search_bp = Blueprint('search', __name__) 
 
-@search_bp.route('/api/search', methods=['GET'])
+@search_bp.route('/', methods=['GET'])
 def filter_query():
     query = request.args.get('q')
     chat_session = model.start_chat(history=filtering_history)
