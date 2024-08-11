@@ -1,0 +1,7 @@
+flask
+google-generativeai
+flask-cors
+python-dotenv
+google-api-python-client
+markdown-pdf
+youtube-transcript-api
