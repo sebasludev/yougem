@@ -169,7 +169,7 @@ Example:
   "contents": "Can you explain the main points of the video?",
   "video_id": "dQw4w9WgXcQ",
   "system_instruction": "Provide a summary of the key topics discussed in the video.",
-  "model": "gpt-3.5-turbo"
+  "model": "gemini-1.5-flash"
 }
 ```
 
@@ -209,7 +209,7 @@ payload = {
     "contents": "What are the key points discussed in this video?",
     "video_id": "dQw4w9WgXcQ",
     "system_instruction": "Provide a concise summary of the main topics.",
-    "model": "gpt-3.5-turbo"
+    "model": "gemini-1.5-flash"
 }
 
 response = requests.post(url, json=payload)
