@@ -14,8 +14,6 @@ const pathMap = {
 const queryMaps = {
   Video: "q",
   Roadmap: "subject",
-  Educators: "educators",
-  Collection: "collection",
 };
 
 const placeholderMap = {
@@ -26,8 +24,10 @@ const placeholderMap = {
     "Search Collection from multiple subjects, example: 'I want to listen to linkin-park and System of a down'",
 };
 
-function SearchInput() {
-  const [selected, setSelected] = useState("Video");
+function SearchInput({ place }) {
+  const [selected, setSelected] = useState(
+    place === "Video" ? "Video" : "Roadmap"
+  );
   let [searchParams] = useSearchParams();
   let [query, setQuery] = useState(searchParams.get("q"));
 

@@ -1,19 +1,46 @@
-import { NavLink, Outlet, useParams } from "react-router-dom";
+import {
+  Link,
+  NavLink,
+  Outlet,
+  useNavigate,
+  useParams,
+} from "react-router-dom";
 import { useLocalStorage } from "@uidotdev/usehooks";
+import SearchInput from "../../components/search_input";
 
 function LearnLayoutWithSidebar() {
   const { subject, id } = useParams();
   const [data] = useLocalStorage("navbar");
+  const navigate = useNavigate();
+
+  const handleClick = (event) => {
+    event.preventDefault();
+    navigate(-1);
+  };
   if (!subject || id)
     return (
-      <div className='px-64 py-20 w-screen bg-black'>
-        <Outlet />
+      <div className='flex flex-col h-screen items-center py-5'>
+        <SearchInput place='Roadmap' />
+        <div className='px-64 py-20 w-screen bg-black'>
+          <Outlet />
+        </div>
       </div>
     );
   return (
     <div className='flex h-screen '>
       <nav className='overflow-y-auto flex-grow shrink-0 w-fit pl-5 pr-10 py-10 border-r-2 border-white  text-white '>
         <div className='space-y-10'>
+          <div className='flex justify-between'>
+            <Link
+              to='..'
+              relative='path'
+              className='text-normal text-red-400 font-bold'
+            >
+              YouGem
+            </Link>
+            <button onClick={handleClick}>Back</button>
+          </div>
+
           <h6 className='text-white  font-black text-xl '>
             {JSON.parse(data).prompt}
           </h6>

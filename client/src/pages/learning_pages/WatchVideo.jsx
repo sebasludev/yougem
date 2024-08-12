@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import ReactPlayer from "react-player/youtube";
 import {
   VideoPlayerProvider,
@@ -85,10 +85,19 @@ function TranscriptChat() {
 }
 
 function WatchVideoPageContent() {
+  const navigate = useNavigate();
+
+  const handleClick = (event) => {
+    event.preventDefault();
+    navigate(-1);
+  };
   return (
     <div className='flex h-full py-10 px-5 space-x-10 w-full '>
-      <div className='flex-grow flex-shrink-0 w-[67%]'>
+      <div className='flex-grow flex-shrink-0 w-[67%] flex flex-col justify-between'>
         <VideoPlayer />
+        <button onClick={handleClick} className='text-white font-bold  w-fit'>
+          Back
+        </button>
       </div>
       <TranscriptChat />
     </div>

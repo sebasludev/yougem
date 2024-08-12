@@ -1,6 +1,6 @@
 /* eslint-disable react/display-name */
 import React, { useState } from "react";
-import { useLocation, useSearchParams } from "react-router-dom";
+import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import ReactPlayer from "react-player/youtube";
 
 import {
@@ -89,11 +89,21 @@ function TranscriptChat() {
     </div>
   );
 }
+
 function WatchVideoPageContent() {
+  const navigate = useNavigate();
+
+  const handleClick = (event) => {
+    event.preventDefault();
+    navigate(-1);
+  };
   return (
     <div className='flex h-screen py-10 px-5 space-x-10 w-full '>
-      <div className='flex-grow flex-shrink-0 w-[67%]'>
+      <div className='flex-grow flex-shrink-0 w-[67%] flex flex-col justify-between'>
         <VideoPlayer />
+        <button onClick={handleClick} className='text-white font-bold  w-fit'>
+          Back
+        </button>
       </div>
       <TranscriptChat />
     </div>

@@ -5,7 +5,7 @@ function SearchPageLayout() {
   return (
     <div className=' w-screen flex flex-col h-screen'>
       <div className='h-fit flex justify-center py-5 flex-grow-0'>
-        <SearchInput />
+        <SearchInput place='Video' />
       </div>
       <div className='h-full'>
         <Outlet />
