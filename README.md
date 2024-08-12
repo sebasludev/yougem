@@ -1,5 +1,7 @@
 # YouGem | A webapp powered by Google Gemini AI
 
+Note: Before starting, i whould like to mention that i will continue working on the project of a different repo, to work on performance and polish the UI, thanks.
+
 ## Description
 
 This webapp is my first project i ever build, it is also a project for Google AI developer competition.
