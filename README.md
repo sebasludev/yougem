@@ -14,6 +14,8 @@ Technologies:
 
 ## Project Structure
 
+All the gemini models are in the different route  bp.py file
+
 ```
 project_root/
 │
