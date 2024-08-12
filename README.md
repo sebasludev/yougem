@@ -1,6 +1,6 @@
 # YouGem | A webapp powered by Google Gemini AI
 
-Note: Before starting, i whould like to mention that i will continue working on the project in a different repo, to work on performance and polish the UI, thanks.
+Before starting, I would like to mention that I will continue working on the project in a different repository to improve performance and polish the UI. Thank you.
 
 ## Description
 
